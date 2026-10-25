@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azzura Balqis | My Academic Space</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon">a.</div>
+      <div>
+        <h2>azzura.</h2>
+        <p>MY ACADEMIC SPACE</p>
+      </div>
+    </div>
+
+    <div class="profile-mini">
+      <div class="avatar">A</div>
+      <div>
+        <h3>Azzura Balqis</h3>
+        <p>Psychology Student</p>
+      </div>
+    </div>
+
+    <p class="menu-label">MENU UTAMA</p>
+    <nav>
+      <a href="#beranda" class="nav-link active">⌂ <span>Beranda</span></a>
+      <a href="#materi" class="nav-link">▤ <span>Materi Kuliah</span></a>
+      <a href="#tugas" class="nav-link">▧ <span>Tugas</span></a>
+      <a href="#projek" class="nav-link">◇ <span>Projek</span></a>
+      <a href="#profil" class="nav-link">♡ <span>Profil Saya</span></a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="quote">“Small steps every day lead to beautiful things.”</div>
+      <p>Made with ♡ for Azzura</p>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">MY PERSONAL SPACE</p>
+        <h2>Academic Dashboard</h2>
+      </div>
+      <div class="date" id="today"></div>
+    </header>
+
+    <section id="beranda" class="section">
+      <div class="hero">
+        <div class="hero-content">
+          <p class="eyebrow light">WELCOME TO YOUR SPACE</p>
+          <h1>Hello, Azzura! <span>♡</span></h1>
+          <p class="hero-text">
+            Tempat kecil untuk menyimpan perjalanan belajar,
+            merapikan tugas, dan mengumpulkan setiap pencapaianmu.
+          </p>
+          <a href="#materi" class="hero-button">Explore my space ↗</a>
+        </div>
+        <div class="hero-decoration">a.</div>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR OVERVIEW</p>
+          <h2>Ringkasan Akademik</h2>
+        </div>
+        <p class="muted">Your little progress tracker.</p>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-icon">▤</div>
+          <p>Total Materi</p>
+          <h3 id="materi-count">0</h3>
+          <span>file tersimpan</span>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">▧</div>
+          <p>Total Tugas</p>
+          <h3 id="tugas-count">0</h3>
+          <span>tugas tercatat</span>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">◇</div>
+          <p>Total Projek</p>
+          <h3 id="projek-count">0</h3>
+          <span>projek tersimpan</span>
+        </div>
+      </div>
+
+      <div class="welcome-note">
+        <span class="note-icon">✿</span>
+        <div>
+          <h3>A gentle reminder</h3>
+          <p>Jangan lupa istirahat. Kamu tidak harus menyelesaikan semuanya sekaligus.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="materi" class="section content-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR LEARNING LIBRARY</p>
+          <h2>Materi Kuliah</h2>
+          <p class="muted">Semua bahan belajar dalam satu tempat.</p>
+        </div>
+      </div>
+      <div class="upload-panel">
+        <div>
+          <h3>Tambahkan materi baru</h3>
+          <p>PDF, Word, PowerPoint, dan file lainnya.</p>
+        </div>
+        <form id="materi-form" class="add-form">
+          <input id="materi-nama" placeholder="Nama materi" required>
+          <input id="materi-matkul" placeholder="Nama mata kuliah" required>
+          <input id="materi-file" type="file" required>
+          <button type="submit">+ Tambah materi</button>
+        </form>
+      </div>
+      <div id="materi-list" class="file-list"></div>
+    </section>
+
+    <section id="tugas" class="section content-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ASSIGNMENT TRACKER</p>
+          <h2>Daftar Tugas</h2>
+          <p class="muted">Catat tugas dan simpan dokumennya.</p>
+        </div>
+      </div>
+      <div class="upload-panel">
+        <h3>Tambahkan tugas baru</h3>
+        <form id="tugas-form" class="add-form">
+          <input id="tugas-nama" placeholder="Nama tugas" required>
+          <input id="tugas-matkul" placeholder="Nama mata kuliah" required>
+          <input id="tugas-deadline" type="date">
+          <input id="tugas-file" type="file">
+          <button type="submit">+ Tambah tugas</button>
+        </form>
+      </div>
+      <div id="tugas-list" class="file-list"></div>
+    </section>
+
+    <section id="projek" class="section content-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">MY WORKS</p>
+          <h2>Projek Saya</h2>
+          <p class="muted">Kumpulan karya dan hasil pengerjaan.</p>
+        </div>
+      </div>
+      <div class="upload-panel">
+        <h3>Tambahkan projek baru</h3>
+        <form id="projek-form" class="add-form">
+          <input id="projek-nama" placeholder="Nama projek" required>
+          <textarea id="projek-deskripsi" placeholder="Deskripsi singkat projek"></textarea>
+          <input id="projek-file" type="file">
+          <button type="submit">+ Tambah projek</button>
+        </form>
+      </div>
+      <div id="projek-list" class="file-list"></div>
+    </section>
+
+    <section id="profil" class="section content-section">
+      <p class="eyebrow">A LITTLE ABOUT ME</p>
+      <h2>Profil Saya</h2>
+      <div class="profile-card">
+        <div class="profile-avatar">A</div>
+        <p class="eyebrow">HELLO, I'M</p>
+        <h2>Azzura Balqis</h2>
+        <p>Mahasiswa Program Profesi Psikolog</p>
+        <p>Universitas Sumatera Utara</p>
+        <div class="profile-message">
+          A personal space to learn, grow, and keep every little achievement.
+        </div>
+      </div>
+    </section>
+
+    <footer>Made with ♡ for Azzura Balqis · My Academic Space</footer>
+  </main>
+</div>
+
+<!-- Library Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- JavaScript website -->
+<script src="script.js"></script>
+</body>
+</html>
