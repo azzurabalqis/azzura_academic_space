@@ -686,3 +686,120 @@ footer {
     padding-left: 57px;
   }
 }
+/* TAMBAHAN FITUR LOGIN */
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.auth-button {
+  border: none;
+  background: var(--wine);
+  color: #fff5f8;
+  padding: 11px 16px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-button:hover {
+  background: var(--wine-dark);
+}
+
+/* STATUS TUGAS DAN PROJEK */
+.item-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.item-status input[type="checkbox"] {
+  accent-color: var(--wine);
+  cursor: pointer;
+}
+
+.status-selesai {
+  color: #64866b;
+  text-decoration: line-through;
+}
+
+/* TOMBOL AKSI */
+.file-actions button:hover,
+.file-actions a:hover {
+  background: var(--pink);
+}
+
+.file-actions .edit-button {
+  color: var(--wine);
+}
+
+.file-actions .delete-button {
+  color: #a42d42;
+}
+
+/* FORM LOGIN */
+.login-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(75, 25, 44, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 380px;
+  background: var(--pink-light);
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  padding: 25px;
+}
+
+.login-box h3 {
+  color: var(--wine);
+  font-family: "Playfair Display", serif;
+  margin-bottom: 15px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: white;
+  font-family: inherit;
+}
+
+.login-box button {
+  padding: 11px 15px;
+  border: none;
+  border-radius: 9px;
+  background: var(--wine);
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.login-box .close-login {
+  background: #ead1da;
+  color: var(--wine);
+  margin-left: 7px;
+}
+
+/* RESPONSIVE TAMBAHAN */
+@media (max-width: 650px) {
+  .topbar-right {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -49,7 +48,13 @@
         <p class="eyebrow">MY PERSONAL SPACE</p>
         <h2>Academic Dashboard</h2>
       </div>
-      <div class="date" id="today"></div>
+
+      <div class="topbar-right">
+        <div class="date" id="today"></div>
+        <button type="button" id="auth-button" class="auth-button">
+          Login Pengelola
+        </button>
+      </div>
     </header>
 
     <section id="beranda" class="section">
@@ -81,12 +86,14 @@
           <h3 id="materi-count">0</h3>
           <span>file tersimpan</span>
         </div>
+
         <div class="stat-card">
           <div class="stat-icon">▧</div>
           <p>Total Tugas</p>
           <h3 id="tugas-count">0</h3>
           <span>tugas tercatat</span>
         </div>
+
         <div class="stat-card">
           <div class="stat-icon">◇</div>
           <p>Total Projek</p>
@@ -104,6 +111,7 @@
       </div>
     </section>
 
+    <!-- MATERI KULIAH -->
     <section id="materi" class="section content-section">
       <div class="section-heading">
         <div>
@@ -112,11 +120,13 @@
           <p class="muted">Semua bahan belajar dalam satu tempat.</p>
         </div>
       </div>
+
       <div class="upload-panel">
         <div>
           <h3>Tambahkan materi baru</h3>
           <p>PDF, Word, PowerPoint, dan file lainnya.</p>
         </div>
+
         <form id="materi-form" class="add-form">
           <input id="materi-nama" placeholder="Nama materi" required>
           <input id="materi-matkul" placeholder="Nama mata kuliah" required>
@@ -124,30 +134,46 @@
           <button type="submit">+ Tambah materi</button>
         </form>
       </div>
+
       <div id="materi-list" class="file-list"></div>
     </section>
 
+    <!-- TUGAS -->
     <section id="tugas" class="section content-section">
       <div class="section-heading">
         <div>
           <p class="eyebrow">ASSIGNMENT TRACKER</p>
           <h2>Daftar Tugas</h2>
-          <p class="muted">Catat tugas dan simpan dokumennya.</p>
+          <p class="muted">Catat tugas, deadline, dan progres pengerjaanmu.</p>
         </div>
       </div>
+
       <div class="upload-panel">
         <h3>Tambahkan tugas baru</h3>
+
         <form id="tugas-form" class="add-form">
           <input id="tugas-nama" placeholder="Nama tugas" required>
           <input id="tugas-matkul" placeholder="Nama mata kuliah" required>
-          <input id="tugas-deadline" type="date">
+
+          <label for="tugas-deadline">Tanggal deadline</label>
+          <input id="tugas-deadline" type="date" required>
+
+          <input
+            id="tugas-link"
+            type="url"
+            placeholder="Tautan tugas (opsional)"
+          >
+
           <input id="tugas-file" type="file">
+
           <button type="submit">+ Tambah tugas</button>
         </form>
       </div>
+
       <div id="tugas-list" class="file-list"></div>
     </section>
 
+    <!-- PROJEK -->
     <section id="projek" class="section content-section">
       <div class="section-heading">
         <div>
@@ -156,27 +182,48 @@
           <p class="muted">Kumpulan karya dan hasil pengerjaan.</p>
         </div>
       </div>
+
       <div class="upload-panel">
         <h3>Tambahkan projek baru</h3>
+
         <form id="projek-form" class="add-form">
           <input id="projek-nama" placeholder="Nama projek" required>
-          <textarea id="projek-deskripsi" placeholder="Deskripsi singkat projek"></textarea>
+
+          <textarea
+            id="projek-deskripsi"
+            placeholder="Deskripsi singkat projek"
+          ></textarea>
+
+          <label for="projek-tanggal">Tanggal projek / target selesai</label>
+          <input id="projek-tanggal" type="date" required>
+
+          <input
+            id="projek-link"
+            type="url"
+            placeholder="Tautan projek / GitHub (opsional)"
+          >
+
           <input id="projek-file" type="file">
+
           <button type="submit">+ Tambah projek</button>
         </form>
       </div>
+
       <div id="projek-list" class="file-list"></div>
     </section>
 
+    <!-- PROFIL -->
     <section id="profil" class="section content-section">
       <p class="eyebrow">A LITTLE ABOUT ME</p>
       <h2>Profil Saya</h2>
+
       <div class="profile-card">
         <div class="profile-avatar">A</div>
         <p class="eyebrow">HELLO, I'M</p>
         <h2>Azzura Balqis</h2>
         <p>Mahasiswa Program Profesi Psikolog</p>
         <p>Universitas Sumatera Utara</p>
+
         <div class="profile-message">
           A personal space to learn, grow, and keep every little achievement.
         </div>
@@ -192,5 +239,6 @@
 
 <!-- JavaScript website -->
 <script src="script.js"></script>
+
 </body>
 </html>
